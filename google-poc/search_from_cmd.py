@@ -5,8 +5,8 @@ import time
 import sys
 
 # Your Custom Search API credentials
-API_KEY = "AIzaSyAiZYKvcyz5AVUqS07BnhAmcsuGiYqjbwY"
-CX_ID = "024efef60ebdf492d"
+API_KEY = "Your API KEY ID"
+CX_ID = "Your CX ID"
 
 # Default values
 DEFAULT_LOCATIONS = ["Bucuresti", "Craiova", "Cluj"]
