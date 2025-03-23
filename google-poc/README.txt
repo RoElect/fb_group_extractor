@@ -28,6 +28,19 @@ HOW TO USE:
 - The results will be saved in a CSV file automatically.
 - If no files are selected, the script will use default values and notify the user.
 
+5. Run the CMD script:
+
+- Save your locations in a text file (one per line).
+- Save your key_words in another text file (one per line).
+- Run the script from the command line:
+
+  ```sh
+  python3 scraper.py locations.txt key_words.txt
+  ```
+
+- If no files are provided, default values will be used, and the user will be notified.
+- The script will generate a CSV file with the extracted Facebook groups.
+
 
 
 HOW TO CREATE AN EXECUTABLE:
