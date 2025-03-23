@@ -27,3 +27,60 @@ HOW TO USE:
 - Click the "Run Search" button to start the extraction process.
 - The results will be saved in a CSV file automatically.
 - If no files are selected, the script will use default values and notify the user.
+
+
+
+HOW TO CREATE AN EXECUTABLE:
+
+
+Pentru a permite utilizatorilor non-tehnici să ruleze aplicația, putem transforma scriptul Python într-un executabil folosind **PyInstaller**.
+
+NOTA: Asta trebuie facut folosind API KEY-ul si CX ID-ul asociate contului care va suporta costurile!
+
+---
+
+### **1. Instalarea PyInstaller**
+Dacă nu este deja instalat, rulează următoarea comandă:
+```bash
+pip install pyinstaller
+```
+
+---
+
+### **2. Crearea Executabilului**
+Mergi în directorul unde se află `search_from_gui.py` și rulează:
+```bash
+pyinstaller --onefile --windowed search_from_gui.py
+```
+
+#### **Explicație:**
+- `--onefile`: Creează un singur fișier executabil (fără fișiere adiționale necesare).
+- `--windowed`: Ascunde fereastra de terminal (ideal pentru aplicațiile GUI).
+
+---
+
+### **3. Găsirea Executabilului**
+După rulare, vei găsi executabilul în folderul `dist/`:
+- **Windows:** `dist/search_from_gui.exe`
+- **Mac/Linux:** `dist/search_from_gui`
+
+---
+
+### **4. Distribuirea Aplicației**
+
+#### **Windows**
+- Pune `search_from_gui.exe` într-un fișier ZIP și oferă-l utilizatorilor.
+
+#### **Mac/Linux**
+- Asigură-te că fișierul are permisiuni de rulare:
+  ```bash
+  chmod +x search_from_gui
+  ./search_from_gui
+  ```
+
+---
+
+### **5. Creare Installer (Opțional)**
+Pentru o instalare mai elegantă, se pot folosi:
+- **Windows:** [NSIS](https://nsis.sourceforge.io/Download) pentru a crea un installer.
+- **Mac:** [create-dmg](https://github.com/create-dmg/create-dmg) pentru a genera un `.dmg`.
